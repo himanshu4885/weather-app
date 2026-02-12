@@ -9,7 +9,7 @@ export default function SearchBox({ updateInfo }) {
 
   const WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather";
   const GEO_URL = "https://api.openweathermap.org/geo/1.0/direct";
-  const API_KEY = "43b2a542ee012e26e14762eb437922b0";
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
   // Fetch Weather
   let getWeatherInfo = async () => {
@@ -93,4 +93,5 @@ export default function SearchBox({ updateInfo }) {
     </div>
   );
 }
+
 
